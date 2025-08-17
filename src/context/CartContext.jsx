@@ -1,4 +1,3 @@
-// src/context/CartContext.jsx
 import React, { createContext, useState } from 'react';
 import toast from 'react-hot-toast';
 
@@ -20,7 +19,6 @@ export const CartProvider = ({ children }) => {
     });
   };
 
-  // NEW FUNCTION: Increase quantity
   const increaseQuantity = (gameId) => {
     setCartItems(prevItems =>
       prevItems.map(item =>
@@ -29,14 +27,13 @@ export const CartProvider = ({ children }) => {
     );
   };
 
-  // NEW FUNCTION: Decrease quantity (and remove if quantity is 1)
   const decreaseQuantity = (gameId) => {
     setCartItems(prevItems =>
       prevItems
         .map(item =>
           item.id === gameId ? { ...item, quantity: item.quantity - 1 } : item
         )
-        .filter(item => item.quantity > 0) // Remove item if quantity becomes 0
+        .filter(item => item.quantity > 0) 
     );
   };
   
@@ -48,8 +45,8 @@ export const CartProvider = ({ children }) => {
     cartItems,
     addToCart,
     removeFromCart,
-    increaseQuantity, // <-- Export new functions
-    decreaseQuantity, // <-- Export new functions
+    increaseQuantity, 
+    decreaseQuantity, 
   };
 
   return (

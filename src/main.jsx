@@ -1,4 +1,3 @@
-// src/main.jsx
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App.jsx';
@@ -8,7 +7,7 @@ import { Toaster } from 'react-hot-toast';
 
 import { ThemeProvider } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
-import GlobalStyles from '@mui/material/GlobalStyles'; // Import GlobalStyles
+import GlobalStyles from '@mui/material/GlobalStyles'; 
 import { theme } from './theme';
 
 const globalScrollbarStyles = {
@@ -16,14 +15,14 @@ const globalScrollbarStyles = {
     width: '8px',
   },
   '*::-webkit-scrollbar-track': {
-    background: '#0a1929', // Match our background
+    background: '#0a1929', 
   },
   '*::-webkit-scrollbar-thumb': {
-    background: '#132f4c', // Match our paper color
+    background: '#132f4c', 
     borderRadius: '4px',
   },
   '*::-webkit-scrollbar-thumb:hover': {
-    background: '#00bfff', // Use primary color on hover
+    background: '#00bfff', 
   },
 };
 
@@ -42,7 +41,6 @@ ReactDOM.createRoot(document.getElementById('root')).render(
             }}
           />
           <CssBaseline />
-          {/* Add the global styles component here */}
           <GlobalStyles styles={globalScrollbarStyles} />
           <App />
         </ThemeProvider>

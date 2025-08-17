@@ -1,9 +1,7 @@
-// src/theme.js
 import { createTheme } from '@mui/material/styles';
 
 export const theme = createTheme({
   palette: {
-    // ... your new purple/amber palette is here ...
     mode: 'dark',
     primary: {
       main: '#ffab40',

@@ -1,4 +1,3 @@
-// src/components/GameCard.jsx
 import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { CartContext } from '../context/CartContext.jsx';
@@ -26,8 +25,6 @@ const GameCard = ({ game }) => {
         image={game.image}
         alt={game.name}
         sx={{
-          // THE FIX IS HERE: Reduced height from 300 to 220.
-          // This creates a more balanced, rectangular shape for a 3-column layout.
           height: 220,
           objectFit: 'cover',
         }}
@@ -53,7 +50,6 @@ const GameCard = ({ game }) => {
         }}
       >
         <Typography 
-          // Use a slightly smaller variant to match the new card size
           variant="h6" 
           component={Link} 
           to={`/game/${game.id}`}
@@ -62,7 +58,7 @@ const GameCard = ({ game }) => {
           {game.name}
         </Typography>
         <Typography variant="h6" sx={{ my: 1 }}>
-          ${game.price.toFixed(2)}
+          ₹{game.price.toFixed(2)}
         </Typography>
         <Button 
           variant="contained"

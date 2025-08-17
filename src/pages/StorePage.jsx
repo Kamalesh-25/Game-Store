@@ -1,15 +1,12 @@
-// src/pages/StorePage.jsx
-import React, { useState } from 'react'; // <-- Import useState
+import React, { useState } from 'react'; 
 import { games } from '../data/games.js';
 import GameList from '../components/GameList.jsx';
-import { Typography, TextField, Box } from '@mui/material'; // <-- Import TextField and Box
+import { Typography, TextField, Box } from '@mui/material'; 
 import SearchIcon from '@mui/icons-material/Search';
 
 const StorePage = () => {
-  // State to hold the search query
   const [searchQuery, setSearchQuery] = useState('');
 
-  // Filter games based on the search query (case-insensitive)
   const filteredGames = games.filter(game =>
     game.name.toLowerCase().includes(searchQuery.toLowerCase())
   );
@@ -23,7 +20,7 @@ const StorePage = () => {
         <TextField
           variant="outlined"
           label="Search Games"
-          onChange={(e) => setSearchQuery(e.target.value)} // Update state on change
+          onChange={(e) => setSearchQuery(e.target.value)} 
           sx={{ width: '300px' }}
           InputProps={{
             startAdornment: (
@@ -32,7 +29,7 @@ const StorePage = () => {
           }}
         />
       </Box>
-      <GameList games={filteredGames} /> {/* Pass the filtered list */}
+      <GameList games={filteredGames} /> 
     </>
   );
 };

@@ -1,4 +1,3 @@
-// src/App.jsx
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
@@ -18,10 +17,6 @@ function App() {
         sx={{ 
           mt: 4, 
           mb: 4,
-          // THE FINAL FIX IS HERE:
-          // We are reducing the padding to make the side gaps smaller.
-          // xs: 1 = 8px padding on mobile
-          // sm: 2 = 16px padding on tablets and desktops (half of what it was before)
           px: { xs: 1, sm: 2 } 
         }}
       >
