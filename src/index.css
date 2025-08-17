@@ -19,10 +19,32 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #0a1929;
+  background-color: #1a103c; /* Change this to match the theme */
   color: #e0e0e0;
 }
 
+/* src/index.css */
+
+/* --- START: CUSTOM FONT DEFINITIONS --- */
+@font-face {
+  font-family: 'ICECREAMY'; /* We are naming our font 'ICECREAMY' */
+  src: url('./assets/fonts/icecreamy-regular.woff2') format('woff2'),
+       url('./assets/fonts/icecreamy-regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Super Shiny'; /* We are naming our font 'Super Shiny' */
+  src: url('./assets/fonts/supershiny-regular.woff2') format('woff2'),
+       url('./assets/fonts/supershiny-regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+/* --- END: CUSTOM FONT DEFINITIONS --- */
+
+
+/* ... the rest of your index.css file ... */
 /* ... rest of your css ... */
 
 /* ... the rest of your index.css file ... */

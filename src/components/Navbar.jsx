@@ -17,9 +17,9 @@ const Navbar = () => {
       sx={{ borderBottom: 1, borderColor: 'rgba(255, 255, 255, 0.12)' }}
     >
       <Toolbar>
-        <VideogameAssetIcon sx={{ mr: 1 }} />
+        <VideogameAssetIcon sx={{ mr: 1, fontSize:'2.5rem' }} />
         <Typography 
-          variant="h6" 
+          variant="h2" 
           component={Link} 
           to="/" 
           sx={{ flexGrow: 1, textDecoration: 'none', color: 'inherit', fontWeight: 'bold' }}
