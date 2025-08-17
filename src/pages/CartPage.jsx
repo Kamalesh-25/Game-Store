@@ -56,8 +56,25 @@ const CartPage = () => {
             </Paper>
           ))}
         </Grid>
+        
         <Grid item xs={12} md={4}>
+          <Paper sx={{ p: 2 }}>
+            <Typography variant="h5" gutterBottom>Order Summary</Typography>
+            <Typography variant="h4">Total: ₹{totalPrice.toFixed(2)}</Typography>
+            
+            <Button 
+              variant="contained" 
+              color="primary" 
+              fullWidth 
+              sx={{ mt: 2 }}
+              component={Link}
+              to="/checkout"
+            >
+              Proceed to Checkout
+            </Button>
+          </Paper>
         </Grid>
+        
       </Grid>
     </>
   );

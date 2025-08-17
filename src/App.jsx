@@ -6,6 +6,8 @@ import StorePage from './pages/StorePage';
 import GameDetailPage from './pages/GameDetailPage';
 import CartPage from './pages/CartPage';
 import { Container } from '@mui/material';
+import CheckoutPage from './pages/CheckoutPage'; // <-- 1. Import the new page
+
 
 function App() {
   return (
@@ -25,6 +27,7 @@ function App() {
           <Route path="/store" element={<StorePage />} />
           <Route path="/game/:id" element={<GameDetailPage />} />
           <Route path="/cart" element={<CartPage />} />
+          <Route path="/checkout" element={<CheckoutPage />} />
         </Routes>
       </Container>
     </>
